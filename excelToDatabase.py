@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 # original author: injetlee
 # https://github.com/injetlee/Python
-#
+# 参考：https://www.cnblogs.com/fatcat132006/p/4081576.html
 # python             3.7.3
 # 
 #excelToDatabase.py
