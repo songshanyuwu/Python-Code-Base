@@ -6,7 +6,7 @@
 # 
 #
 #countFile.py
-# 仿Linux命令tree生成树形目录结构， 并汇总当前目录下文件总算
+# 仿Linux树形目录结构并汇总当前目录下文件总数
 
 
 import os  
@@ -39,3 +39,9 @@ if __name__ == '__main__':
     #path = u"D:\\影像备份\\照片" 
     path = os.getcwd()   #当前目录
     dirsTree(path)
+
+#  判断Path是不是目录    
+# os.path.isdir(childPath)
+
+# 统计文件夹下文件（含文件夹）的个数
+# len(os.listdir(DIR))
