@@ -69,6 +69,49 @@
 - sheet：工作表，一个workbook有多个，表名识别，如“sheet1”,“sheet2”等。
 - cell： 单元格，存储数据对象
 
+    1.创建一个workbook（工作簿）
+    wb = Workbook()  # 一个工作簿(workbook)在创建的时候同时至少也新建了一张工作表(worksheet)。
+
+    2.打开一个已有的workbook：
+     wb = load_workbook('file_name.xlsx')
+     
+    3.打开sheet：
+    通过名字ws = wb["frequency"] 或ws2 = wb.get_sheet_by_name('frequency')
+    不知道名字用index
+        sheet_names = wb.get_sheet_names()  #方法得到工作簿的所有工作表
+        ws = wb.get_sheet_by_name(sheet_names[index])# index为0为第一张表 
+    或者（调用得到正在运行的工作表）
+        ws =wb.active或ws = wb.get_active_sheet() #通过_active_sheet_index设定读取的表，默认0读第一个表
+        活动表表名wb.get_active_sheet().title
+        
+    4.新建sheet（工作表）
+    ws1 = wb.create_sheet() #默认插在最后
+    ws2 = wb.create_sheet(0) #插在开头 ，
+    在创建工作表的时候系统自动命名，依次为Sheet, Sheet1, Sheet2 ...
+    ws.title = "New Title" #修改表名称
+    简化 ws2 = wb.create_sheet(title="Pi")
+    
+    5.读写单元格
+    当一个工作表被创建时，其中是不包含单元格。只有当单元格被获取时才被创建。这种方式下，我们不会创建我们使用不到的单元格，从而减少了内存消耗。
+    可以直接根据单元格的索引直接获得
+    c = ws['A4']     #读取单元格，如果不存在将在A4新建一个
+    可以通过cell()方法获取单元格(行号列号从1开始)
+    d = ws.cell(row = 4, column = 2) #通过行列读
+    d = ws.cell('A4')
+    写入单元格（cell）值
+    ws['A4'] = 4      #写单元格 
+    ws.cell(row = 4, column = 2).value = 'test')
+    ws.cell(row = 4, column = 2, value = 'test')
+    
+    6.访问多个单元格
+    cell_range = ws['A1':'C2']    #
+    使用切片获取多个单元格
+    get_cell_collection()     #读所有单元格数据
+    
+    7.按行、按列操作    逐行读
+     ws.iter_rows(range_string=None, row_offset=0, column_offset=0) #返回一个生成器,
+     获得多个单元格
+
 
 
 ## 其他杂项
@@ -78,5 +121,5 @@
 ## 注意：
 - 本项目仅用于学习和交流
 > 欢迎任何人参与和完善：一个人可以走的很快，但是一群人却可以走的更远
-> Thanks for al
+> Thanks for all
 
