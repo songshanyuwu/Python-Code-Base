@@ -30,20 +30,20 @@
 
 ## CUP和内存使用率的监控/刷新显示
 
-- [x] [CPU_Memory_Monitoring.py](https://github.com/songshanyuwu/Python-Code-Base/CPU_Memory_Monitoring.py)
-- [x] [CPU_Memory_Flush.py](https://github.com/songshanyuwu/Python-Code-Base/CPU_Memory_Flush.py)
-- [x] [CPU_Memory_Flush2.py](https://github.com/songshanyuwu/Python-Code-Base/CPU_Memory_Flush2.py)
+- [x] [CPU_Memory_Monitoring.py](https://github.com/songshanyuwu/Python-Code-Base/CPU_Memory_Monitoring.py) 实时监控CUP和内存的使用率
+- [x] [CPU_Memory_Flush.py](https://github.com/songshanyuwu/Python-Code-Base/CPU_Memory_Flush.py) print输出刷新
+- [x] [CPU_Memory_Flush2.py](https://github.com/songshanyuwu/Python-Code-Base/CPU_Memory_Flush2.py) print输出刷新，定位输出刷新
 
 
 ## 天气和PM2.5的查询
-- [x] [weatherAndPM.py](https://github.com/songshanyuwu/Python-Code-Base/weatherAndPM.py)
-- [x] [weatherAndPM_GUI.py](https://github.com/songshanyuwu/Python-Code-Base/weatherAndPM_GUI.py)
+- [x] [weatherAndPM.py](https://github.com/songshanyuwu/Python-Code-Base/weatherAndPM.py) 命令行版
+- [x] [weatherAndPM_GUI.py](https://github.com/songshanyuwu/Python-Code-Base/weatherAndPM_GUI.py) GUI版
 
 
 ## Excel文件的读写/Excel←→MySQL数据传输
-- [x] [redayexcel.py](https://github.com/songshanyuwu/Python-Code-Base/redayexcel.py)
-- [x] [MySQL2Excel.py](https://github.com/songshanyuwu/Python-Code-Base/MySQL2Excel.py)
-- [x] [excelToDatabase.py](https://github.com/songshanyuwu/Python-Code-Base/excelToDatabase.py)
+- [x] [redayexcel.py](https://github.com/songshanyuwu/Python-Code-Base/redayexcel.py) 读取Excel文件内容
+- [x] [MySQL2Excel.py](https://github.com/songshanyuwu/Python-Code-Base/MySQL2Excel.py) 从MySQL中读取表内容，写入Excel
+- [x] [excelToDatabase.py](https://github.com/songshanyuwu/Python-Code-Base/excelToDatabase.py) 从Excel读取内容，写入MySQL
 
 ### python处理excel已经有大量包，主流代表有：
 - xlwings：简单强大，可替代VBA
@@ -55,8 +55,8 @@
 - xlutils：结合xlrd/xlwt，老牌python包，需要注意的是你必须同时安装这三个库
 <br>
 <p align="center">
-    <img src="https://images2017.cnblogs.com/blog/846822/201709/846822-20170922180351790-690554626.png" alt="Master">
-    <img src="https://images2017.cnblogs.com/blog/846822/201709/846822-20170922180359743-270272669.png" alt="Master">
+    <img src="https://images2017.cnblogs.com/blog/846822/201709/846822-20170922180351790-690554626.png">
+    <img src="https://images2017.cnblogs.com/blog/846822/201709/846822-20170922180359743-270272669.png">
 </p>
 <br>
 
@@ -68,6 +68,7 @@
 - workbook： 工作簿，一个excel文件包含多个sheet。
 - sheet：工作表，一个workbook有多个，表名识别，如“sheet1”,“sheet2”等。
 - cell： 单元格，存储数据对象
+<br>
 
     1.创建一个workbook（工作簿）
     wb = Workbook()  # 一个工作簿(workbook)在创建的时候同时至少也新建了一张工作表(worksheet)。
@@ -111,7 +112,7 @@
     7.按行、按列操作    逐行读
      ws.iter_rows(range_string=None, row_offset=0, column_offset=0) #返回一个生成器,
      获得多个单元格
-
+<br>
 
 
 ## 其他杂项
