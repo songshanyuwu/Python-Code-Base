@@ -89,8 +89,7 @@
         
     4.新建sheet（工作表）
     ws1 = wb.create_sheet() #默认插在最后
-    ws2 = wb.create_sheet(0) #插在开头 ，
-    在创建工作表的时候系统自动命名，依次为Sheet, Sheet1, Sheet2 ...
+    ws2 = wb.create_sheet(0) #插在开头，在创建工作表的时候系统自动命名，依次为Sheet, Sheet1, Sheet2 ...
     ws.title = "New Title" #修改表名称
     简化 ws2 = wb.create_sheet(title="Pi")
     
@@ -107,8 +106,7 @@
     ws.cell(row = 4, column = 2, value = 'test')
     
     6.访问多个单元格
-    cell_range = ws['A1':'C2']    #
-    使用切片获取多个单元格
+    cell_range = ws['A1':'C2']    #使用切片获取多个单元格
     get_cell_collection()     #读所有单元格数据
     
     7.按行、按列操作    逐行读
