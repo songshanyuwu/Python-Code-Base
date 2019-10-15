@@ -1,6 +1,3 @@
-# Python-Code-Base
-个人学习的积累
-
 <h2 align="center"><code>Python-Code-Base</code></h2>
 
 <br>
@@ -8,9 +5,7 @@
     <img src="以后再说" 
         alt="Master">
 </p>
-
 <br>
-
 
 <p align="center">
   <a href="https://github.com/songshanyuwu/Python-Code-Base">
@@ -21,13 +16,13 @@
     <img src="https://img.shields.io/badge/License-GNU-blue.svg?longCache=true"
         alt="License">
   </a>
-
 </p>
 
 
 ****
 
 # 目标
+个人学习的积累
 
 ## 关于
 
