@@ -46,17 +46,19 @@
 - [x] [excelToDatabase.py](https://github.com/songshanyuwu/Python-Code-Base/excelToDatabase.py) 从Excel读取内容，写入MySQL
 
 ### python处理excel已经有大量包，主流代表有：
-- xlwings：简单强大，可替代VBA
-- openpyxl：简单易用，功能广泛；（可读写excel表）专门处理Excel2007及以上版本产生的xlsx文件，xls和xlsx之间转换容易
-- pandas：使用需要结合其他库，数据处理是pandas立身之本
-- win32com：不仅仅是excel，可以处理office;不过它相当于是 windows COM 的封装，新手使用起来略有些痛苦。
-- Xlsxwriter：丰富多样的特性，缺点是不能打开/修改已有文件，意味着使用 xlsxwriter 需要从零开始。
-- DataNitro：作为插件内嵌到excel中，可替代VBA，在excel中优雅的使用python
-- xlutils：结合xlrd/xlwt，老牌python包，需要注意的是你必须同时安装这三个库
+
+    - xlwings：简单强大，可替代VBA
+    - openpyxl：简单易用，功能广泛；（可读写excel表）专门处理Excel2007及以上版本产生的xlsx文件，xls和xlsx之间转换容易
+    - pandas：使用需要结合其他库，数据处理是pandas立身之本
+    - win32com：不仅仅是excel，可以处理office;不过它相当于是 windows COM 的封装，新手使用起来略有些痛苦。
+    - Xlsxwriter：丰富多样的特性，缺点是不能打开/修改已有文件，意味着使用 xlsxwriter 需要从零开始。
+    - DataNitro：作为插件内嵌到excel中，可替代VBA，在excel中优雅的使用python
+    - xlutils：结合xlrd/xlwt，老牌python包，需要注意的是你必须同时安装这三个库
+
 <br>
 <p align="center">
-    <img src="https://images2017.cnblogs.com/blog/846822/201709/846822-20170922180351790-690554626.png">
     <img src="https://images2017.cnblogs.com/blog/846822/201709/846822-20170922180359743-270272669.png">
+    <img src="https://images2017.cnblogs.com/blog/846822/201709/846822-20170922180351790-690554626.png">
 </p>
 <br>
 
