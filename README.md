@@ -116,6 +116,8 @@
 
 ## 网络socket和线程threading
 - [x] [portScanner1.py](https://github.com/songshanyuwu/Python-Code-Base/portScanner1.py) 简单的端口扫描例子
+- [x] [portScanner2.py](https://github.com/songshanyuwu/Python-Code-Base/portScanner2.py) 使用线程的端口扫描例子
+- [x] [portScanner3.py](https://github.com/songshanyuwu/Python-Code-Base/portScanner3.py) 使用argparse获取参数
 - [x] [portScanner1.py](https://github.com/songshanyuwu/Python-Code-Base/portScanner1.py) 
 - [x] [portScanner1.py](https://github.com/songshanyuwu/Python-Code-Base/portScanner1.py) 
 
