@@ -13,15 +13,16 @@
 # python3内置两个thread模块：
 #    1、_thread模块
 #    2、threading模块  ← 推荐使用threading模块
+# 
+# 获取参数IP和port，然后对给定的参数进行端口扫描
 
 
-#from socket import *
 import socket
 import threading
 import getopt
 import sys,os,time
 
-begin_time = time.time()
+
 lock = threading.Lock()
 threads = []
 openNum = 0
@@ -50,14 +51,10 @@ def portScanner(host,port):
         s.close()
     except:
         pass
-    # except Exception as err:
-    #     print(err)
-
-
 
 
 # 扫描指定端口 如： 22,80,139,445,3306,3389
-def ThreadNum(host_list,port_list,m_count):
+def ThreadNum(host_list,port_list):
     for host in host_list:
         #print('Scanning the host:%s......' % (host))
         if isinstance(port_list,str):
@@ -72,13 +69,12 @@ def ThreadNum(host_list,port_list,m_count):
                 t = threading.Thread(target=portScanner,args=(host,int(port)))
                 threads.append(t)
                 t.start()
-
+        # 等待至线程中止。
         for t in threads:
-            # 等待至线程中止。这阻塞调用线程直至线程的join() 方法被调用中止-正常退出或者抛出未处理的异常-或者是可选的超时发生。
+            # 这阻塞调用线程直至线程的join() 方法被调用中止-正常退出或者抛出未处理的异常-或者是可选的超时发生。
             t.join()
             # 返回正在运行的线程数量，与len(threading.enumerate())有相同的结果。
             #print(threading.activeCount())
-
         # print('[***] The host:%s scan is complete!' % (host))
         # print('[***] A total of %d open port ' % (openNum))
         # print()
@@ -150,7 +146,6 @@ def get_port_list(portstr):
     return port_list
 
 
-
 def main():
     msg = '''
 Scanning a network asset information script,author:songshanyuwu.
@@ -161,39 +156,28 @@ Usage: python portScanner4.py -h 192.168.1 [-p 21,80,3306]
     err = ''
     ipstr = ''
     portstr = ''
-    m_count = 500
 
     # 如果报错则打印提示信息
     if len(sys.argv) < 2:
         print(msg)
     try:
-        options,args = getopt.getopt(sys.argv[1:],"h:p:m:t:")
+        options,args = getopt.getopt(sys.argv[1:],"h:p:")
         for opt,arg in options:
             if opt == '-h':
                 ipstr = arg
             elif opt == '-p':
                 portstr = arg
-            elif opt == '-m':
-                m_count = int(arg)
-        
         # 测试用数据
         # ipstr = '172.16.21.60-99'
         # portstr = '22,80,443,3389'
         host_list = get_ip_list(ipstr)
         port_list = get_port_list(portstr)
-        # print(host_list,port_list)
-
-        ThreadNum(host_list,port_list,m_count)
-
+        # 开始扫描端口
+        ThreadNum(host_list,port_list)
     except Exception as err:
         #print(err)
         print( msg)
 
 
-
-
 if __name__ == '__main__':
     main()
-    end_time = time.time()
-    run_time = end_time-begin_time
-    print ('该循环程序运行时间：',run_time)
