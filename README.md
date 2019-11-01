@@ -118,8 +118,8 @@
 - [x] [portScanner1.py](https://github.com/songshanyuwu/Python-Code-Base/portScanner1.py) 简单的端口扫描例子
 - [x] [portScanner2.py](https://github.com/songshanyuwu/Python-Code-Base/portScanner2.py) 使用线程的端口扫描例子
 - [x] [portScanner3.py](https://github.com/songshanyuwu/Python-Code-Base/portScanner3.py) 使用argparse获取参数
-- [x] [portScanner1.py](https://github.com/songshanyuwu/Python-Code-Base/portScanner1.py) 
-- [x] [portScanner1.py](https://github.com/songshanyuwu/Python-Code-Base/portScanner1.py) 
+- [x] [portScanner4.py](https://github.com/songshanyuwu/Python-Code-Base/portScanner4.py) 对给定的参数进行多线程端口扫描 
+- [x] [portScanner5.py](https://github.com/songshanyuwu/Python-Code-Base/portScanner5.py) 优化：获取参数IP和port进行扫描 
 
 <br>
 
