@@ -133,7 +133,7 @@
 
 ## 其他杂项
 - [x] [directory_tree_count.py](https://github.com/songshanyuwu/Python-Code-Base/directory_tree_count.py)
-- [x] [typeName.py](https://github.com/songshanyuwu/Python-Code-Base/typeName.py)
+- [x] [typeName.py](https://github.com/songshanyuwu/Python-Code-Base/typeName.py) 对于存储数据为json格式的txt或log文件进行处理，筛选类型和数量
 
 
 ## 注意：
