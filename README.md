@@ -133,6 +133,7 @@
 
 ## 其他杂项
 - [x] [directory_tree_count.py](https://github.com/songshanyuwu/Python-Code-Base/directory_tree_count.py)
+- [x] [typeName.py](https://github.com/songshanyuwu/Python-Code-Base/typeName.py)
 
 
 ## 注意：
