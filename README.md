@@ -133,12 +133,8 @@
 ## 系统操作
 - [x] [文件夹分类工具.py](https://github.com/songshanyuwu/Python-Code-Base/文件夹分类工具.py) 用于文件夹分类，批量操作
 
-
 <br>
 
-
-
-文件夹分类工具.py
 
 ## 其他杂项
 - [x] [directory_tree_count.py](https://github.com/songshanyuwu/Python-Code-Base/directory_tree_count.py)
